@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "students.md has at least one real student entry",
+      "setup": "",
+      "run": "bash .github/classroom/test_students.sh",
+      "input": "",
+      "output": "PASS:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
