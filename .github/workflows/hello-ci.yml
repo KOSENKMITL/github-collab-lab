@@ -1,0 +1,19 @@
+name: Hello CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show basic info
+        run: |
+          echo "Hello from GitHub Classroom CI!"
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_HEAD_REF"
+          echo "Event: $GITHUB_EVENT_NAME"
