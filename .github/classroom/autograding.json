@@ -8,7 +8,37 @@
       "output": "PASS:",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 5
+    },
+    {
+      "name": "Branch name follows feature/add-name-* convention",
+      "setup": "",
+      "run": "bash .github/classroom/test_branch_name.sh",
+      "input": "",
+      "output": "PASS:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Commit message contains 'add' and 'name'",
+      "setup": "",
+      "run": "bash .github/classroom/test_commit_message.sh",
+      "input": "",
+      "output": "PASS:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "CI workflow file exists",
+      "setup": "",
+      "run": "bash .github/classroom/test_ci_workflow.sh",
+      "input": "",
+      "output": "PASS:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
     }
   ]
 }
