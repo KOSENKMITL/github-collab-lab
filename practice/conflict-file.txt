@@ -1,0 +1,12 @@
+This file is used to demonstrate merge conflicts.
+
+Instructions for the instructor (do not delete):
+
+1. Ask multiple students to edit the SAME line below with their own text.
+2. Have them commit & push on different branches.
+3. When merging branches, a merge conflict will occur.
+4. Students must resolve the conflict manually.
+
+--- STUDENT EDIT AREA BELOW ---
+
+Line to edit: <replace this text with your own sentence>
