@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-# ดึง commit message ล่าสุด
-MSG=$(git log -1 --pretty=%B | tr 'A-Z' 'a-z')
+# Read last commit message (raw, don't modify case)
+MSG=$(git log -1 --pretty=%B || true)
 
-if [[ -z "$MSG" ]]; then
+if [[ -z "${MSG:-}" ]]; then
   echo "FAIL: Could not read last commit message"
   exit 1
 fi
 
-if echo "$MSG" | grep -q "add" && echo "$MSG" | grep -q "name"; then
+# Use grep -qi (quiet + case-insensitive)
+if echo "$MSG" | grep -qi "add" && echo "$MSG" | grep -qi "name"; then
   echo "PASS: Commit message contains 'add' and 'name'"
   exit 0
 else
